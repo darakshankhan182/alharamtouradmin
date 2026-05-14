@@ -1,5 +1,5 @@
 // utils/api.js
-const API_BASE_URL = 'https://alharamtour-backend.vercel.app/api';
+const API_BASE_URL = 'https://alharamtourbackend.vercel.app/api';
 
 // Generic API request function with timeout
 export const apiRequest = async (endpoint, method = 'GET', data = null, token = null, timeout = 10000) => {
@@ -62,7 +62,7 @@ export const apiRequest = async (endpoint, method = 'GET', data = null, token = 
     if (error.name === 'AbortError') {
       throw new Error('Request timeout. Server might be down or slow.');
     } else if (error.name === 'TypeError' && error.message === 'Failed to fetch') {
-      throw new Error('Cannot connect to server. Make sure backend is running on https://alharamtour-backend.vercel.app/');
+      throw new Error('Cannot connect to server. Make sure backend is running on https://alharamtourbackend.vercel.app/');
     }
     
     throw error;
