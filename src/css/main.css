@@ -1,0 +1,98 @@
+/* Dashboard Widgets */
+.dashboard-widget {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--primary-color);
+}
+
+.widget-title {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Progress Bars */
+.progress {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.6s ease;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-primary {
+  background-color: var(--primary-lightest);
+  color: var(--primary-dark);
+}
+
+.badge-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary-lightest);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Modal */
+.modal-header {
+  background-color: var(--primary-lightest);
+  border-bottom: 1px solid #e9ecef;
+  padding: 15px 20px;
+  color: var(--primary-dark);
+}
+
+/* Dark mode variant (optional) */
+@media (prefers-color-scheme: dark) {
+  .admin-dark {
+    --primary-color: #3f665b;
+    --primary-dark: #2d4a43;
+    --primary-light: #568479;
+    --primary-lightest: #1e332e;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .admin-dark .admin-card,
+  .admin-dark .dashboard-widget,
+  .admin-dark .stats-card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+  
+  .admin-dark .form-control {
+    background-color: #333;
+    border-color: #404040;
+    color: #e0e0e0;
+  }
+}

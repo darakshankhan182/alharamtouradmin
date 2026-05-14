@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles with #3f665b color scheme */
+:root {
+  --primary-color: #3f665b;
+  --primary-dark: #2d4a43;
+  --primary-light: #568479;
+  --primary-lightest: #e8f0ed;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Custom components using Tailwind classes */
+.btn-primary {
+  @apply bg-primary-500 text-white px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.btn-primary:hover {
+  @apply bg-primary-600;
+}
+
+.btn-primary:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-300;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg;
+}
+
+.input-field:focus {
+  @apply outline-none border-primary-500 ring-2 ring-primary-200;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+/* Admin-specific styles */
+.admin-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 mb-5;
+}
+
+.admin-card-header {
+  @apply bg-primary-50 border-b border-gray-200 px-6 py-4 font-semibold text-primary-700;
+}
+
+.admin-card-body {
+  @apply p-6;
+}
+
+.admin-table {
+  @apply w-full bg-white;
+}
+
+.admin-table thead {
+  @apply bg-primary-50;
+}
+
+.admin-table th {
+  @apply px-6 py-3 text-left text-xs font-semibold text-primary-700 uppercase tracking-wider border-b-2 border-primary-200;
+}
+
+.admin-table td {
+  @apply px-6 py-4 whitespace-nowrap border-b border-gray-200;
+}
+
+.admin-table tr:hover {
+  @apply bg-gray-50;
+}
+
+.admin-sidebar {
+  @apply bg-primary-700 text-white w-64 min-h-screen;
+}
+
+.admin-sidebar a {
+  @apply text-white hover:bg-primary-600 px-4 py-3 block transition-colors;
+}
+
+.admin-sidebar a.active {
+  @apply bg-primary-800 border-l-4 border-primary-300;
+}
+
+.admin-header {
+  @apply bg-primary-600 text-white px-6 py-4 shadow-md;
+}
+
+/* Alert styles */
+.alert {
+  @apply p-4 rounded-lg mb-4 border-l-4;
+}
+
+.alert-info {
+  @apply bg-primary-50 border-primary-500 text-primary-800;
+}
+
+.alert-success {
+  @apply bg-green-50 border-green-500 text-green-800;
+}
+
+.alert-warning {
+  @apply bg-yellow-50 border-yellow-500 text-yellow-800;
+}
+
+.alert-danger {
+  @apply bg-red-50 border-red-500 text-red-800;
+}
+
+/* Badges */
+.badge {
+  @apply inline-block px-2 py-1 text-xs font-semibold rounded-full;
+}
+
+.badge-primary {
+  @apply bg-primary-100 text-primary-800;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Pagination */
+.pagination-item {
+  @apply px-3 py-2 border border-gray-300 text-primary-600;
+}
+
+.pagination-item.active {
+  @apply bg-primary-600 text-white border-primary-600;
+}
+
+.pagination-item:hover:not(.active) {
+  @apply bg-gray-50;
+}
+
+/* Form styles */
+.form-label {
+  @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-control {
+  @apply input-field;
+}
+
+.form-control:focus {
+  @apply border-primary-500 ring-2 ring-primary-200;
+}
+
+/* Stats cards */
+.stats-card {
+  @apply bg-white rounded-lg shadow p-6 border-l-4 border-primary-500;
+}
+
+.stats-number {
+  @apply text-3xl font-bold text-primary-600;
+}
+
+.stats-label {
+  @apply text-sm text-gray-500 uppercase tracking-wider;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    @apply w-16;
+  }
+  
+  .admin-sidebar .menu-text {
+    @apply hidden;
+  }
+}
