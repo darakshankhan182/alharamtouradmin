@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://alharamtourbackend.vercel.app/api/:path*',
+        destination: 'https://alharamtourbackend-seven.vercel.app/api/:path*',
       },
     ];
   },

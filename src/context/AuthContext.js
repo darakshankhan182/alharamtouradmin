@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
   // Function to check if backend is available
   const checkBackendHealth = async () => {
     try {
-      const response = await fetch('https://alharamtourbackend.vercel.app/health', {
+      const response = await fetch('https://alharamtourbackend-seven.vercel.app/health', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
           const controller = new AbortController();
           const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-          const response = await fetch('https://alharamtourbackend.vercel.app/api/auth/profile', {
+          const response = await fetch('https://alharamtourbackend-seven.vercel.app/api/auth/profile', {
             method: 'GET',
             headers: {
               'Authorization': `Bearer ${storedToken}`,
@@ -142,7 +142,7 @@ export const AuthProvider = ({ children }) => {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-      const response = await fetch('https://alharamtourbackend.vercel.app/api/auth/login', {
+      const response = await fetch('https://alharamtourbackend-seven.vercel.app/api/auth/login', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ export const AuthProvider = ({ children }) => {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-      const response = await fetch('https://alharamtourbackend.vercel.app/api/auth/register', {
+      const response = await fetch('https://alharamtourbackend-seven.vercel.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -266,7 +266,7 @@ export const AuthProvider = ({ children }) => {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-      const response = await fetch('https://alharamtourbackend.vercel.app/api/auth/profile', {
+      const response = await fetch('https://alharamtourbackend-seven.vercel.app/api/auth/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
