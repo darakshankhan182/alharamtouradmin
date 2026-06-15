@@ -8,7 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 import { inquiriesAPI } from '@/utils/api';
 import toast from 'react-hot-toast';
 import { 
-  User, 
+  User,  
   Mail, 
   Phone, 
   MapPin, 
